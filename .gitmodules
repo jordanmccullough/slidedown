@@ -1,0 +1,6 @@
+[submodule "dependencies/bootstrap-sass"]
+	path = dependencies/bootstrap-sass
+	url = https://github.com/twbs/bootstrap-sass
+[submodule "dependencies/jquery-scrollsnap-plugin"]
+	path = dependencies/jquery-scrollsnap-plugin
+	url = https://github.com/benoitpointet/jquery-scrollsnap-plugin.git
