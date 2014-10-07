@@ -1,0 +1,5 @@
+<div class="slide">
+<div class="alignment">
+{{slide | markdownify}}
+</div>
+</div>

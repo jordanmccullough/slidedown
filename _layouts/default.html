@@ -1,0 +1,85 @@
+---
+layout: site
+leadingpath: ../
+---
+
+<div class="timer-wrapper fade-out">
+  <div class="timer">
+    <div class="timer-exit"><span class="octicon octicon-x"></span></div>
+    <div class="timer-amount">
+      <input type="number" id="minutes" name="minutes" min="1" max="20" value="5" placeholder="min" class="form-control">
+      <!-- <input type="number" id="seconds" name="seconds" min="1" max="60" value="0" placeholder="sec" class="form-control"> -->
+      <button id="start-stop" type="submit" class="btn btn-default">Start</button>
+    </div>
+    <div class="timer-content">
+      <span class="time-left" id="time-left"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container deck">
+  <div class="row">
+    <div class="col-md-9 materials">
+      <div id="teacher" class="hidden">
+        <div class="alignment">
+          <div id="teacher-avatar" class=""></div>
+          <div class="" id="teacher-info">
+            <div id="teacher-name"></div>
+
+            <span id="teacher-username">
+              <span class="octicon octicon-octoface"></span>
+            </span>
+
+            <span id="teacher-email">
+              <span class="octicon octicon-mail"></span>
+            </span>
+
+            <span id="teacher-organization">
+              <span class="octicon octicon-organization"></span>
+            </span>
+
+            <span id="teacher-location">
+              <span class="octicon octicon-location"></span>
+            </span>
+
+            <div class="teacher-badges">
+              <span id="teacher-repo" class="">
+                <span class="octicon octicon-repo"></span>
+              </span>
+
+              <span id="teacher-followers" class="">
+                <span class="octicon octicon-person"></span>
+              </span>
+
+              <span id="teacher-following" class="">
+                <span class="octicon octicon-steps"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{ content }}
+    </div>
+    <div class="col-md-3">
+      <div id="toc-wrapper">
+        <div id="toc" data-spy="affix" data-offset-top="145">
+          <ul id="toc-list" class="nav nav-pills nav-stacked" role="tablist">
+            <li></li>
+          </ul>
+          <ul class="nav display-controls">
+            <li>
+              <input type="checkbox" name="slide-only" id="slide-only-toggle" class="slide-only-check" value="true">
+              <label id="slides-only" for="slide-only-toggle" class="slides-only-label">Slides Only</label>
+            </li>
+            <li>
+              <!-- <div class="timer-toggle"></div> -->
+              <input type="checkbox" name="timer-check" id="timer-check" class="timer-check" value="true">
+              <label for="timer-check" class="timer-label">Timer</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
