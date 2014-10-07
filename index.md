@@ -2,7 +2,7 @@
 layout: default
 title: Sample Slide Me page
 byline: Just another byline
-leadingpath: ./
+leadingpath: .
 ---
 
 {% capture slide %}
