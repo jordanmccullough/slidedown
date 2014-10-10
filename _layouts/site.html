@@ -9,6 +9,9 @@ layout: bare
 
   <link rel="stylesheet" href="{{ page.leadingpath }}/_stylesheets/page.css">
 
+  <!--Custom theme-->
+  {% if page.custom-theme %}<link href="{{ page.leadingpath }}/{{ page.custom-theme }}" rel="stylesheet">{% endif %}
+
   <link rel="icon" type="image/x-icon" href="/favicon.png" />
   <link rel="alternate" type="application/atom+xml" title="Upcoming Events" href="/atom.xml">
   <script type="text/javascript" src="{{ page.leadingpath }}/_javascript/jquery-1.11.0.min.js"></script>
