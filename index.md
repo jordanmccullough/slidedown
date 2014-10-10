@@ -3,6 +3,7 @@ layout: default
 title: Sample Slide Me page
 byline: Just another byline
 leadingpath: .
+custom-theme: "_stylesheets/flatty/theme/css/main.css"
 ---
 
 {% capture slide %}

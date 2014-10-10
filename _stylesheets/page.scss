@@ -2,13 +2,6 @@
 @import "octicons.css";
 @import "../dependencies/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-/* Color Definitions */
-$color-dark: #1875c6;
-$color-bright: #00a5ea;
-$mono-dark: #222222;
-$mono-light: #f3f3f3;
-$mono-medium: #5a5a5a;
-$mono-bright: #ffffff;
 
 //
 table{
@@ -17,12 +10,10 @@ table{
 	@extend .table-bordered;
 }
 
-
-$mono-dark: #454545;
 @mixin octicon-link($char){
 	font: normal normal 1em octicons;
 	text-decoration: none;
-	color: $color-dark;
+	color: $brand-primary;
 
 	&:after{
 		content: $char;
@@ -61,7 +52,7 @@ $mono-dark: #454545;
 }
 
 .display-controls{
-	border-top: solid 2px $mono-light;
+	border-top: solid 2px $gray-lighter;
 	margin-top: 5px;
 	padding-top: 10px;
 }
@@ -74,13 +65,13 @@ $mono-dark: #454545;
 	width: 0;
 
 	&:checked + label{
-		color: $color-dark;
+		color: $brand-primary;
 
 		&:before{
 			content: '\f046';
-			color: rgba($mono-bright, 1);
-			background-color: $color-dark;
-			box-shadow: 0 0 0 2px $color-dark;
+			color: rgba($gray-lighter, 1);
+			background-color: $gray-darker;
+			box-shadow: 0 0 0 2px $gray-darker;
 			padding-left: 0px;
 			line-height: 1em;
 		}
@@ -98,11 +89,11 @@ $mono-dark: #454545;
 		left: 0;
 		display: inline-block;
 		border-radius: 50%;
-		color: rgba($mono-dark, 0);
+		color: rgba($gray-darker, 0);
 		-webkit-transition: all 180ms;
 		width: 18px;
 		height: 18px;
-		box-shadow: 0 0 0 2px $mono-dark;
+		box-shadow: 0 0 0 2px $gray-darker;
 		padding-top: 1px;
 	}
 }
@@ -113,13 +104,13 @@ $mono-dark: #454545;
 	width: 0;
 
 	&:checked + label{
-		color: $color-dark;
+		color: $gray-darker;
 
 		&:before{
 			content: '\f03a';
-			color: rgba($mono-bright, 1);
-			background-color: $color-dark;
-			box-shadow: 0 0 0 2px $color-dark;
+			color: rgba($gray-lighter, 1);
+			background-color: $gray-darker;
+			box-shadow: 0 0 0 2px $gray-darker;
 			padding-left: 0px;
 			line-height: 1em;
 		}
@@ -137,12 +128,12 @@ $mono-dark: #454545;
 		left: 0;
 		display: inline-block;
 		border-radius: 50%;
-		color: rgba($mono-dark, 0);
+		color: rgba($gray-darker, 0);
 		-webkit-transition: all 180ms;
 		padding-left: 5px;
 		width: 18px;
 		height: 18px;
-		box-shadow: 0 0 0 2px $mono-dark;
+		box-shadow: 0 0 0 2px $gray-darker;
 		line-height: .2em;
 	}
 }
@@ -165,7 +156,7 @@ $mono-dark: #454545;
 		width: 150px;
 		display: block;
 		text-align: center;
-		
+
 		.timer-toggle{
 			width: 100%;
 			border-top-left-radius: 5px;
@@ -200,7 +191,7 @@ $mono-dark: #454545;
 	}
 
 	.teacher-name{
-		color: $color-dark;
+		color: $brand-primary;
 		font-size: 300%;
 	}
 
@@ -291,6 +282,39 @@ $mono-dark: #454545;
 			color: #CCCCCC;
 			content: "\f078";
 			font: normal normal 20px octicons;
+		}
+	}
+}
+
+#toc-toggle{
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	z-index:1000;
+}
+.toc-toggle-check{
+	visibility: hidden;
+	width: 0;
+	height: 0;
+
+	& + .toc-toggle-label{
+		color: $gray-darker;
+		opacity: .5;
+		padding: 1em;
+
+		.toc-header{
+			margin-left: .5em;
+			display: none;
+		}
+	}
+
+	&:checked + .toc-toggle-label{
+		opacity: 1;
+
+		.toc-header{
+			display: inline;
 		}
 	}
 }

@@ -5441,7 +5441,6 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-/* Color Definitions */
 .fade-out {
   background: none !important;
   margin-left: 100%;
@@ -5461,7 +5460,7 @@ button.close {
     visibility: hidden; }
 
 .display-controls {
-  border-top: solid 2px #f3f3f3;
+  border-top: solid 2px #eeeeee;
   margin-top: 5px;
   padding-top: 10px; }
 
@@ -5470,12 +5469,12 @@ button.close {
   height: 0;
   width: 0; }
   .timer-check:checked + label {
-    color: #1875c6; }
+    color: #428bca; }
     .timer-check:checked + label:before {
       content: '\f046';
-      color: white;
-      background-color: #1875c6;
-      box-shadow: 0 0 0 2px #1875c6;
+      color: #eeeeee;
+      background-color: #222222;
+      box-shadow: 0 0 0 2px #222222;
       padding-left: 0px;
       line-height: 1em; }
 
@@ -5490,11 +5489,11 @@ button.close {
     left: 0;
     display: inline-block;
     border-radius: 50%;
-    color: rgba(69, 69, 69, 0);
+    color: rgba(34, 34, 34, 0);
     -webkit-transition: all 180ms;
     width: 18px;
     height: 18px;
-    box-shadow: 0 0 0 2px #454545;
+    box-shadow: 0 0 0 2px #222222;
     padding-top: 1px; }
 
 .slide-only-check {
@@ -5502,12 +5501,12 @@ button.close {
   height: 0;
   width: 0; }
   .slide-only-check:checked + label {
-    color: #1875c6; }
+    color: #222222; }
     .slide-only-check:checked + label:before {
       content: '\f03a';
-      color: white;
-      background-color: #1875c6;
-      box-shadow: 0 0 0 2px #1875c6;
+      color: #eeeeee;
+      background-color: #222222;
+      box-shadow: 0 0 0 2px #222222;
       padding-left: 0px;
       line-height: 1em; }
 
@@ -5522,12 +5521,12 @@ button.close {
     left: 0;
     display: inline-block;
     border-radius: 50%;
-    color: rgba(69, 69, 69, 0);
+    color: rgba(34, 34, 34, 0);
     -webkit-transition: all 180ms;
     padding-left: 5px;
     width: 18px;
     height: 18px;
-    box-shadow: 0 0 0 2px #454545;
+    box-shadow: 0 0 0 2px #222222;
     line-height: .2em; }
 
 .timer-wrapper {
@@ -5571,7 +5570,7 @@ button.close {
     height: 300px;
     width: 300px; }
   .deck .teacher-name {
-    color: #1875c6;
+    color: #428bca;
     font-size: 300%; }
   .deck #teacher-username, .deck #teacher-email, .deck #teacher-organization, .deck #teacher-location {
     margin: auto .75em;
@@ -5608,7 +5607,7 @@ button.close {
   .deck a[href^="https://"] {
     font: normal normal 1em octicons;
     text-decoration: none;
-    color: #1875c6; }
+    color: #428bca; }
     .deck a[href^="http://"]:after,
     .deck a[href^="https://"]:after {
       content: "";
@@ -5618,7 +5617,7 @@ button.close {
   .deck a[href^="https://help.github.com"] {
     font: normal normal 1em octicons;
     text-decoration: none;
-    color: #1875c6; }
+    color: #428bca; }
     .deck a[href^="https://github.com"]:after,
     .deck a[href^="https://www.github.com"]:after,
     .deck a[href^="https://help.github.com"]:after {
@@ -5628,7 +5627,7 @@ button.close {
   .deck a[href^="https://guides.github.com"] {
     font: normal normal 1em octicons;
     text-decoration: none;
-    color: #1875c6; }
+    color: #428bca; }
     .deck a[href^="http://git-scm.com/book"]:after,
     .deck a[href^="https://guides.github.com"]:after {
       content: "";
@@ -5637,7 +5636,7 @@ button.close {
   .deck a[href^="https://www.youtube.com"] {
     font: normal normal 1em octicons;
     text-decoration: none;
-    color: #1875c6; }
+    color: #428bca; }
     .deck a[href^="https://youtube.com"]:after,
     .deck a[href^="https://www.youtube.com"]:after {
       content: "";
@@ -5647,6 +5646,30 @@ button.close {
     color: #CCCCCC;
     content: "\f078";
     font: normal normal 20px octicons; }
+
+#toc-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 1000; }
+
+.toc-toggle-check {
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+  .toc-toggle-check + .toc-toggle-label {
+    color: #222222;
+    opacity: .5;
+    padding: 1em; }
+    .toc-toggle-check + .toc-toggle-label .toc-header {
+      margin-left: .5em;
+      display: none; }
+  .toc-toggle-check:checked + .toc-toggle-label {
+    opacity: 1; }
+    .toc-toggle-check:checked + .toc-toggle-label .toc-header {
+      display: inline; }
 
 #toc-wrapper {
   opacity: .2;
