@@ -5474,7 +5474,7 @@ button.close {
       content: '\f046';
       color: #eeeeee;
       background-color: #222222;
-      box-shadow: 0 0 0 2px #222222;
+      box-shadow: 0 0 0 1px #222222;
       padding-left: 0px;
       line-height: 1em; }
 
@@ -5489,11 +5489,11 @@ button.close {
     left: 0;
     display: inline-block;
     border-radius: 50%;
-    color: rgba(34, 34, 34, 0);
+    color: rgba(119, 119, 119, 0);
     -webkit-transition: all 180ms;
     width: 18px;
     height: 18px;
-    box-shadow: 0 0 0 2px #222222;
+    box-shadow: 0 0 0 1px #777777;
     padding-top: 1px; }
 
 .slide-only-check {
@@ -5501,12 +5501,12 @@ button.close {
   height: 0;
   width: 0; }
   .slide-only-check:checked + label {
-    color: #222222; }
+    color: #777777; }
     .slide-only-check:checked + label:before {
       content: '\f03a';
       color: #eeeeee;
-      background-color: #222222;
-      box-shadow: 0 0 0 2px #222222;
+      background-color: #777777;
+      box-shadow: 0 0 0 1px #777777;
       padding-left: 0px;
       line-height: 1em; }
 
@@ -5521,12 +5521,12 @@ button.close {
     left: 0;
     display: inline-block;
     border-radius: 50%;
-    color: rgba(34, 34, 34, 0);
+    color: rgba(119, 119, 119, 0);
     -webkit-transition: all 180ms;
     padding-left: 5px;
     width: 18px;
     height: 18px;
-    box-shadow: 0 0 0 2px #222222;
+    box-shadow: 0 0 0 1px #777777;
     line-height: .2em; }
 
 .timer-wrapper {
@@ -5649,8 +5649,8 @@ button.close {
 
 #toc-toggle {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 1em;
+  right: 1em;
   padding: 0;
   margin: 0;
   z-index: 1000; }
@@ -5661,13 +5661,12 @@ button.close {
   height: 0; }
   .toc-toggle-check + .toc-toggle-label {
     color: #222222;
-    opacity: .5;
-    padding: 1em; }
+    opacity: .3; }
     .toc-toggle-check + .toc-toggle-label .toc-header {
       margin-left: .5em;
       display: none; }
   .toc-toggle-check:checked + .toc-toggle-label {
-    opacity: 1; }
+    opacity: .5; }
     .toc-toggle-check:checked + .toc-toggle-label .toc-header {
       display: inline; }
 
