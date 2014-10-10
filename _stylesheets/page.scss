@@ -300,7 +300,11 @@ table{
 	height: 0;
 
 	& + .toc-toggle-label{
+<<<<<<< HEAD
 		color: $gray-darker;
+=======
+		color: $mono-dark;
+>>>>>>> Overhaul TOC with toggle
 		opacity: .5;
 		padding: 1em;
 
@@ -320,7 +324,7 @@ table{
 }
 
 #toc-wrapper{
-	opacity: .2;
+	opacity: .5;
 	transition: all 200ms;
 	&:hover{
 		opacity: 1;
@@ -328,6 +332,7 @@ table{
 }
 
 #toc{
+	margin-top: 4em;
 	font-size: .7em;
 	a{
 		padding: 5px;

@@ -99,6 +99,13 @@ $(function(){
 		});
 	}
 
+	// Bind checkbox toggle for TOC
+	$(".toc-toggle-check").change(function(){
+		$("#toc-toggle").toggleClass("col-md-2");
+		$("#col-content").toggleClass("col-md-10");
+		$("#col-content").toggleClass("col-md-12");
+	});
+
 	// Render the TOC
 	buildToc();
 	// Reframe slides on any window resize
@@ -108,10 +115,10 @@ $(function(){
 	// Ensure slide scale at start
 	updateSlideSize();
 	// Startup slide scrollsnap watching
-	$(document).scrollsnap({
-		snaps: '.slide',
-		proximity: 160
-	});
+	// $(document).scrollsnap({
+	// 	snaps: '.slide',
+	// 	proximity: 0
+	// });
 
 	function updateSlideSize(){
 		var w = window.innerWidth;
