@@ -5660,11 +5660,7 @@ button.close {
   width: 0;
   height: 0; }
   .toc-toggle-check + .toc-toggle-label {
-<<<<<<< HEAD
     color: #222222;
-=======
-    color: #454545;
->>>>>>> Overhaul TOC with toggle
     opacity: .5;
     padding: 1em; }
     .toc-toggle-check + .toc-toggle-label .toc-header {
