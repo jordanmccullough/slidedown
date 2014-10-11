@@ -5442,16 +5442,19 @@ button.close {
   .hidden-print {
     display: none !important; } }
 .col-content, .col-toc {
-  transition: margin 300ms; }
+  transition: padding 300ms, opacity 200ms; }
 
 .col-toc {
   position: fixed;
-  right: -16.66667%; }
+  right: -16.66667%;
+  right: 0;
+  opacity: 0; }
 
 .shift-left.col-content {
-  margin-left: -8.33333%; }
+  padding-right: 16.66667%; }
 .shift-left.col-toc {
-  right: 0; }
+  right: 0;
+  opacity: 1; }
 
 #toc-toggle {
   position: fixed;
