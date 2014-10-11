@@ -101,9 +101,9 @@ $(function(){
 
 	// Bind checkbox toggle for TOC
 	$(".toc-toggle-check").change(function(){
-		$("#toc-toggle").toggleClass("col-md-2");
-		$("#col-content").toggleClass("col-md-10");
-		$("#col-content").toggleClass("col-md-12");
+		console.log("shiftleft on both.");
+		$(".col-content").toggleClass("shift-left");
+		$(".col-toc").toggleClass("shift-left");
 	});
 
 	// Render the TOC
@@ -114,11 +114,12 @@ $(function(){
 	});
 	// Ensure slide scale at start
 	updateSlideSize();
+
 	// Startup slide scrollsnap watching
-	// $(document).scrollsnap({
-	// 	snaps: '.slide',
-	// 	proximity: 0
-	// });
+	$(document).scrollsnap({
+		snaps: '.slide',
+		proximity: 100
+	});
 
 	function updateSlideSize(){
 		var w = window.innerWidth;
