@@ -2,8 +2,6 @@
 @import "octicons.css";
 @import "../dependencies/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-
-//
 table{
 	@extend .table;
 	@extend .table-striped;
@@ -18,6 +16,78 @@ table{
 	&:after{
 		content: $char;
 		margin-left: 5px;
+	}
+}
+
+
+.col-content, .col-toc{
+	transition: padding 300ms, opacity 200ms;
+}
+
+.col-toc{
+	position: fixed;
+	right: -16.66667%;
+	right: 0;
+	opacity: 0;
+}
+
+.shift-left{
+	&.col-content{
+		padding-right: 16.66667%;
+	}
+
+	&.col-toc{
+		right: 0;
+		opacity: 1;
+	}
+}
+
+#toc-toggle{
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	padding: 0;
+	margin: 0;
+	z-index:1000;
+}
+.toc-toggle-check{
+	visibility: hidden;
+	width: 0;
+	height: 0;
+
+	& + .toc-toggle-label{
+		color: $gray-darker;
+		opacity: .3;
+
+		.toc-header{
+			margin-left: 1em;
+			display: none;
+		}
+	}
+
+	&:checked + .toc-toggle-label{
+		opacity: 1;
+		// right: 16.66667%;
+
+		.toc-header{
+			display: inline;
+		}
+	}
+}
+
+#toc-wrapper{
+	opacity: .5;
+	transition: all 200ms;
+	&:hover{
+		opacity: 1;
+	}
+}
+
+#toc{
+	margin-top: 4em;
+	font-size: .7em;
+	a{
+		padding: 5px;
 	}
 }
 
@@ -70,16 +140,16 @@ table{
 		&:before{
 			content: '\f046';
 			color: rgba($gray-lighter, 1);
-			background-color: $gray-darker;
-			box-shadow: 0 0 0 2px $gray-darker;
+			background-color: $gray-light;
+			box-shadow: 0 0 0 1px $gray-light;
 			padding-left: 0px;
-			line-height: 1em;
+			line-height: 14px;
 		}
 	}
 }
 .timer-label{
-	line-height: 18px;
-	padding-left: 25px;
+	line-height: 14px;
+	padding-left: 18px;
 
 	&:before{
 		content: '\f046';
@@ -89,12 +159,12 @@ table{
 		left: 0;
 		display: inline-block;
 		border-radius: 50%;
-		color: rgba($gray-darker, 0);
+		color: rgba($gray-light, 0);
 		-webkit-transition: all 180ms;
-		width: 18px;
-		height: 18px;
-		box-shadow: 0 0 0 2px $gray-darker;
-		padding-top: 1px;
+		width: 14px;
+		height: 14px;
+		box-shadow: 0 0 0 1px $gray-light;
+		// padding-top: 1px;
 	}
 }
 
@@ -104,21 +174,21 @@ table{
 	width: 0;
 
 	&:checked + label{
-		color: $gray-darker;
+		color: $gray-light;
 
 		&:before{
 			content: '\f03a';
 			color: rgba($gray-lighter, 1);
-			background-color: $gray-darker;
-			box-shadow: 0 0 0 2px $gray-darker;
+			background-color: $gray-light;
+			box-shadow: 0 0 0 1px $gray-light;
 			padding-left: 0px;
 			line-height: 1em;
 		}
 	}
 }
 .slides-only-label{
-	line-height: 18px;
-	padding-left: 25px;
+	line-height: 14px;
+	padding-left: 18px;
 
 	&:before{
 		content: '\f03a';
@@ -128,12 +198,12 @@ table{
 		left: 0;
 		display: inline-block;
 		border-radius: 50%;
-		color: rgba($gray-darker, 0);
+		color: rgba($gray-light, 0);
 		-webkit-transition: all 180ms;
 		padding-left: 5px;
-		width: 18px;
-		height: 18px;
-		box-shadow: 0 0 0 2px $gray-darker;
+		width: 14px;
+		height: 14px;
+		box-shadow: 0 0 0 1px $gray-light;
 		line-height: .2em;
 	}
 }
@@ -286,53 +356,8 @@ table{
 	}
 }
 
-#toc-toggle{
-	position: fixed;
-	top: 0;
-	right: 0;
-	padding: 0;
-	margin: 0;
-	z-index:1000;
-}
-.toc-toggle-check{
-	visibility: hidden;
-	width: 0;
-	height: 0;
 
-	& + .toc-toggle-label{
-		color: $gray-darker;
-		opacity: .5;
-		padding: 1em;
 
-		.toc-header{
-			margin-left: .5em;
-			display: none;
-		}
-	}
-
-	&:checked + .toc-toggle-label{
-		opacity: 1;
-
-		.toc-header{
-			display: inline;
-		}
-	}
-}
-
-#toc-wrapper{
-	opacity: .2;
-	transition: all 200ms;
-	&:hover{
-		opacity: 1;
-	}
-}
-
-#toc{
-	font-size: .7em;
-	a{
-		padding: 5px;
-	}
-}
 
 .affix-top{
 	position: absolute;
