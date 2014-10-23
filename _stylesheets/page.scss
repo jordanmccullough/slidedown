@@ -28,14 +28,15 @@ table{
 
 .col-toc{
 	position: fixed;
-	right: -16.66667%;
+	width: 250px;
+	right: -250px;
 	right: 0;
 	opacity: 0;
 }
 
 .shift-left{
 	&.col-content{
-		padding-right: 16.66667%;
+		padding-right: 250px;
 	}
 
 	&.col-toc{
@@ -52,6 +53,7 @@ table{
 	margin: 0;
 	z-index:1000;
 }
+
 .toc-toggle-check{
 	visibility: hidden;
 	width: 0;
@@ -86,10 +88,31 @@ table{
 }
 
 #toc{
-	margin-top: 4em;
-	font-size: .7em;
-	a{
-		padding: 5px;
+	margin-top: 3em;
+	right: 15px;
+
+	.nav{
+		// text-align: right;
+
+		li{
+
+			a{
+				padding: .33em;
+				margin: 0;
+
+				&:hover{
+					background: none;
+				}
+			}
+
+			&.active{
+
+				a{
+					// box-shadow: 0 .95em 0 1px red;
+					color: $gray-darker;
+				}
+			}
+		}
 	}
 }
 
@@ -166,7 +189,6 @@ table{
 		width: 14px;
 		height: 14px;
 		box-shadow: 0 0 0 1px $gray-light;
-		// padding-top: 1px;
 	}
 }
 
@@ -284,7 +306,7 @@ table{
 		display: table;
 
 		h2,h3,h4,h5{
-			text-align: center;
+			// text-align: center;
 			font-size: 400%;
 		}
 
@@ -300,9 +322,10 @@ table{
 		}
 
 		ul,ol{
-			display: inline-block;
+			display: block;
 			text-align: left;
 		}
+
 		.lab{
 			text-align: left;
 			ul, ol{
@@ -311,13 +334,15 @@ table{
 		}
 
 		.alignment{
+			padding: 5%;
 			display: table-cell;
 			vertical-align: middle;
-			text-align: center;
 
-			& > ul{
-				font-size: 250%;
-			}
+			// text-align: center;
+
+			// & > ul{
+			// 	font-size: 250%;
+			// }
 		}
 	}
 
@@ -362,11 +387,11 @@ table{
 
 
 .affix-top{
-	position: absolute;
+
 }
 
 .affix{
-	// margin-top: -145px;
+
 }
 
 .affix-bottom{
