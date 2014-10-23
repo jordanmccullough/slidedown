@@ -28,14 +28,15 @@ table{
 
 .col-toc{
 	position: fixed;
-	right: -16.66667%;
+	width: 250px;
+	right: -250px;
 	right: 0;
 	opacity: 0;
 }
 
 .shift-left{
 	&.col-content{
-		padding-right: 16.66667%;
+		padding-right: 250px;
 	}
 
 	&.col-toc{
@@ -87,10 +88,31 @@ table{
 }
 
 #toc{
-	margin-top: 4em;
-	font-size: .7em;
-	a{
-		padding: 5px;
+	margin-top: 3em;
+	right: 15px;
+
+	.nav{
+		// text-align: right;
+
+		li{
+
+			a{
+				padding: .33em;
+				margin: 0;
+
+				&:hover{
+					background: none;
+				}
+			}
+
+			&.active{
+
+				a{
+					// box-shadow: 0 .95em 0 1px red;
+					color: $gray-darker;
+				}
+			}
+		}
 	}
 }
 
