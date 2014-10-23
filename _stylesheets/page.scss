@@ -1,6 +1,9 @@
+---
+---
+
 @import "octicons.css";
 @import "octicons.css";
-@import "../dependencies/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "_bootstrap.scss";
 
 table{
 	@extend .table;
@@ -18,7 +21,6 @@ table{
 		margin-left: 5px;
 	}
 }
-
 
 .col-content, .col-toc{
 	transition: padding 300ms, opacity 200ms;

@@ -19,3 +19,7 @@ include:
 
 # Custom site configuration
 lang: en
+
+sass:
+  sass_dir: dependencies/bootstrap-sass/assets/stylesheets/
+  style: :compressed
