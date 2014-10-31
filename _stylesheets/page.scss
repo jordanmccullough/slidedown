@@ -272,6 +272,10 @@ table{
 .deck{
 	position: relative;
 	font-size: 16px;
+	color: $gray-lighter;
+
+	padding-left: 0;
+	padding-right: 0;
 
 	.mega-octicon{
 		font-size: 600%;
@@ -302,17 +306,69 @@ table{
 
 	.slide{
 		width: 100%;
-		background: #ffffff;
 		display: table;
+
+		background: #1e325f; /* Old browsers */
+		background: -moz-linear-gradient(top,  #1e325f 0%, #1e325f 19%, #543e6e 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e325f), color-stop(19%,#1e325f), color-stop(100%,#543e6e)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #1e325f 0%,#1e325f 19%,#543e6e 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #1e325f 0%,#1e325f 19%,#543e6e 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #1e325f 0%,#1e325f 19%,#543e6e 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #1e325f 0%,#1e325f 19%,#543e6e 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e325f', endColorstr='#543e6e',GradientType=0 ); /* IE6-9 */
+
+
+		h1{
+			// background: rgba($gray-lighter, .2);
+			// font-size: 600%;
+			padding: .5em;
+			margin-bottom: 2em;
+			text-align: left;
+
+			&:before{
+				content: '\f00a';
+				font: normal normal 700px octicons;
+				margin-left: -1.15em;
+				margin-top: -.4em;
+				position: absolute;
+				opacity: .2;
+				right: -300px;
+				// top: 0;
+			}
+		}
+
+		h2{
+			background: rgba($gray-lighter, .1);
+			font-size: 400%;
+			padding: .65em;
+			margin-bottom: 2em;
+			text-align: center;
+
+			&:before{
+				content: '\f008';
+				font: normal normal 200% octicons;
+				margin-left: -1.15em;
+				margin-top: -.25em;
+				position: absolute;
+			}
+		}
+
+		h3{
+			font-size: 350%;
+			text-align: center;
+			margin-bottom: 2em;
+		}
+
 
 		h2,h3,h4,h5{
 			// text-align: center;
-			font-size: 400%;
+			// font-size: 400%;
 		}
 
-		h1,h2,h3,h4,h5,h6,p,ul,pre,svg{
+		p,ul,ol,pre,svg{
 			margin-left: 0;
 			margin-right: 0;
+			padding: 0 4em;
 		}
 
 		pre{
@@ -334,7 +390,7 @@ table{
 		}
 
 		.alignment{
-			padding: 5%;
+			// padding: 5%;
 			display: table-cell;
 			vertical-align: middle;
 
