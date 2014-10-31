@@ -71,7 +71,6 @@ table{
 
 	&:checked + .toc-toggle-label{
 		opacity: 1;
-		// right: 16.66667%;
 
 		.toc-header{
 			display: inline;
@@ -82,17 +81,18 @@ table{
 #toc-wrapper{
 	opacity: .5;
 	transition: all 200ms;
+
 	&:hover{
 		opacity: 1;
 	}
 }
 
 #toc{
+	width: 220px;
 	margin-top: 3em;
 	right: 15px;
 
 	.nav{
-		// text-align: right;
 
 		li{
 
